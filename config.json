@@ -1,4 +1,5 @@
 {
+  "host": "",
   "provider": "github",
   "contentRepository": {
     "url": "https://github.com/anthonny/empty.git",
