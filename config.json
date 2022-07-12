@@ -1,0 +1,12 @@
+{
+  "host": "https://api.github.com",
+  "provider": "github",
+  "contentRepository": {
+    "url": "https://github.com/anthonny/empty.git",
+    "branch": "content"
+  },
+  "distRepository": {
+    "url": "https://github.com/anthonny/empty.git",
+    "branch": "main"
+  }
+}
