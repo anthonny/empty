@@ -52,5 +52,11 @@
     "repositoryName": "",
     "repositoryUrl": "https://github.com/anthonny/empty.git",
     "id": "9"
+  },
+  {
+    "name": "My 1st project",
+    "repositoryName": "anthonny/empty",
+    "repositoryUrl": "https://github.com/anthonny/empty.git",
+    "id": "10"
   }
 ]
