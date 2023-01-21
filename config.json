@@ -4,11 +4,11 @@
     "host": "https://api.github.com"
   },
   "contentRepository": {
-    "url": "https://github.com/anthonny/empty.git",
+    "url": "https://github.com/anthonny/empty",
     "branch": "content"
   },
   "distRepository": {
-    "url": "https://github.com/anthonny/empty.git",
+    "url": "https://github.com/anthonny/empty",
     "branch": "main"
   }
 }
