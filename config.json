@@ -1,0 +1,15 @@
+{
+  "mode": "standard",
+  "provider": {
+    "name": "github",
+    "host": "https://api.github.com"
+  },
+  "contentRepository": {
+    "url": "https://github.com/anthonny/empty.git",
+    "branch": "content"
+  },
+  "distRepository": {
+    "url": "https://github.com/anthonny/empty.git",
+    "branch": "main"
+  }
+}
