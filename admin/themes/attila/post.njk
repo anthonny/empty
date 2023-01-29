@@ -21,15 +21,15 @@
             </h1>
             <div class="post-meta">
                 <div class="post-meta-avatars">
-                    {{#foreach authors}}
+                    {% for author in authors %}
                         <figure class="post-meta-avatar avatar">
-                            {% if profile_image %}
-                                <a href="{{post.url}}" class="author-avatar">
-                                    <img class="author-profile-image" src="{{post.profile_image size="xs"}}" alt="{{post.name}}"/>
+                            {% if author.profile_image %}
+                                <a href="{{author.url}}" class="author-avatar">
+                                    <img class="author-profile-image" src="{{author.profile_image size="xs"}}" alt="{{author.name}}"/>
                                 </a>
                             {% endif %}
                         </figure>
-                    {{/foreach}}
+                    {% endfor %}
                 </div>
                 <h4 class="post-meta-author">{{authors | join ", "}}</h4>
                 {# <time datetime="{{date format='DD-MM-YYYY'}}">{{date format="DD MMM YYYY"}}</time> &bull; {{reading_time minute=(t "1 min read") minutes=(t "% min read")}} #}
