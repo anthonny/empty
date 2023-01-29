@@ -1,7 +1,7 @@
 {% extends "default" %}
 
 {# Everything inside the #post tags pulls data from the post #}
-{{#post}}
+{% block body %}
 
     <div class="progress-container">
         <span class="progress-bar"></span>
@@ -135,10 +135,10 @@
         </article>
     </main>
 
-{{/post}}
+{% endblock %}
 
 {# The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs #}
-{{#contentFor "scripts"}}
+{% block scripts %}
     <script>
         $(document).ready(function () {
             var viewport = $(window);
@@ -215,4 +215,4 @@
             {% endif %}
         });
     </script>
-{{/contentFor}}
+{% endblock %}
