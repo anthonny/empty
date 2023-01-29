@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{@site.locale}}">
+<html lang="{{site.locale}}">
     <head>
 
         {{!-- Document Settings --}}
@@ -15,7 +15,7 @@
         <link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}"/>
 
         <script>
-            var siteUrl = '{{@site.url}}';
+            var siteUrl = '{{site.url}}';
         </script>
 
         <script>
@@ -38,7 +38,7 @@
             }
         </script>
 
-        {{#match @custom.color_scheme "Dark"}}
+        {% if custom.color_scheme == "Dark" %}
             <script>
                 localStorage.setItem('attila_theme', 'dark');
             </script>
@@ -47,9 +47,9 @@
                     display: none!important;
                 }
             </style>
-        {{/match}}
+        {% endif %}
 
-        {{#match @custom.color_scheme "Light"}}
+        {% if custom.color_scheme == "Light" %}
             <script>
                 localStorage.setItem('attila_theme', 'light');
             </script>
@@ -58,22 +58,22 @@
                     display: none!important;
                 }
             </style>
-        {{/match}}
+        {% endif %}
 
-        {{#match @custom.color_scheme "!=" "Light"}}
-            {{#if @custom.darkmode_accent_color}}
+        {% if custom.color_scheme == "Light" %}
+            {% if custom.darkmode_accent_color %}
                 <style>
                     .theme-dark:root {
-                        --ghost-accent-color: {{@custom.darkmode_accent_color}};
+                        --ghost-accent-color: {{custom.darkmode_accent_color}};
                     }
                     @media (prefers-color-scheme: dark) {
                         html:not(.theme-light):root {
-                            --ghost-accent-color: {{@custom.darkmode_accent_color}};
+                            --ghost-accent-color: {{custom.darkmode_accent_color}};
                         }
                     }
                 </style>
-            {{/if}}
-        {{/match}}
+            {% endif %}
+        {% endif %}
 
         {{ghost_head}}
     </head>
@@ -81,44 +81,45 @@
     <body class="{{body_class}}">
 
         <div class="nav-header">
-            <nav class="nav-wrapper" aria-label="{{t "Main"}}">
-                {{#if @site.logo}}
+            <nav class="nav-wrapper" aria-label="Main">
+                {% if site.logo %}
                     <span class="logo">
-                        <a href="{{@site.url}}" title="{{t "Home"}}"><img src="{{@site.logo}}" alt="{{t "Logo"}}"/></a>
+                        <a href="{{site.url}}" title="Home"><img src="{{site.logo}}" alt="Logo"/></a>
                     </span>
-                {{/if}}
-                {{navigation}}
-                {{> "navigation-meta"}}
+                {% endif %}
+                {# {{navigation}}
+                {{> "navigation-meta"}} #}
             </nav>
 
             <div class="nav-wrapper-control">
                 <div class="inner">
                     <a class="nav-menu" role="button">
-                        <i class="icon icon-menu" aria-hidden="true"></i>{{t "Menu"}}</a>
-                    <a class="nav-search" title="{{t "Search"}}" role="button" data-ghost-search>
+                        <i class="icon icon-menu" aria-hidden="true"></i>Menu</a>
+                    <a class="nav-search" title="Search" role="button" data-ghost-search>
                         <i class="icon icon-search" aria-hidden="true"></i>
                     </a>
                 </div>
             </div>
         </div>
-        <div class="nav-close" role="button" aria-label="{{t "Close"}}"></div>
+        <div class="nav-close" role="button" aria-label="Close"></div>
 
         <section class="page-wrapper">
 
             {{{body}}}
 
             <div class="nav-footer">
-                <nav class="nav-wrapper" aria-label="{{t "Footer"}}">
-                    <span class="nav-copy">{{@site.title}} &copy; {{date format='YYYY'}}
-                        <a class="nav-rss" title="RSS" href="{{@site.url}}/rss/" target="_blank">
+                <nav class="nav-wrapper" aria-label="Footer">
+                    <span class="nav-copy">{{site.title}} &copy; 
+                        {# {{date format='YYYY'}} #}
+                        <a class="nav-rss" title="RSS" href="{{site.url}}/rss/" target="_blank">
                             <i class="icon icon-rss" aria-hidden="true"></i>
                         </a>
                     </span>
-                    {{#if @site.secondary_navigation}}
+                    {# {% if site.secondary_navigation %}
                         {{navigation type="secondary"}}
-                    {{/if}}
-                    <span class="nav-credits">{{t "Published with"}}
-                        <a href="https://ghost.org">Ghost</a> &bull; {{t "Theme" }}
+                    {% endif %} #}
+                    <span class="nav-credits">Published with
+                        <a href="https://ghost.org">Ghost</a> &bull; Theme
                         <a href="https://github.com/zutrinken/attila">Attila</a> &bull; <a class="menu-item js-theme" href="#" data-system="System theme" data-dark="Dark theme" data-light="Light theme">
                             <span class="theme-icon"></span>
                             <span class="theme-text">System theme</span>
@@ -128,7 +129,7 @@
             </div>
 
         </section>
-
+        {# 
         {{!-- Load basic scripts --}}
         <script type="text/javascript" src="{{asset "js/script.js"}}"></script>
 
@@ -136,7 +137,7 @@
 	{{{block "scripts"}}}
 
 	{{!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag --}}
-	{{ghost_foot}}
+	{{ghost_foot}} #}
 
-</body>
+    </body>
 </html>
