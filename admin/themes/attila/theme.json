@@ -1,7 +1,7 @@
 {
     "files": {
-      "default": "default.hbs",
-      "post": "post.hbs"
+      "default": "default.njk",
+      "post": "post.njk"
     },
     "version":"0.1.0"
   }
