@@ -1,0 +1,8 @@
+{
+    "files": {
+      "default": "default.hbs",
+      "post": "post.hbs"
+    },
+    "version":"0.1.0"
+  }
+  
