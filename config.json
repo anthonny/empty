@@ -1,8 +1,8 @@
 {
   "mode": "standard",
   "provider": {
-    "name": "github",
+    "type": "github",
     "host": "https://api.github.com"
   },
-  "repository": "https://github.com/anthonny/empty.git"
+  "repository": "https://github.com/anthonny/empty"
 }
