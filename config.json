@@ -1,8 +1,11 @@
 {
   "mode": "standard",
   "provider": {
+    "platform": "GitHub.com",
     "type": "github",
-    "host": "https://api.github.com"
+    "apiUrl": "https://api.github.com",
+    "personalToken": "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"
   },
-  "repository": "https://github.com/anthonny/empty"
+  "repository": "https://github.com/anthonny/empty",
+  "proxyUrl": "https://cors.isomorphic-git.org"
 }
