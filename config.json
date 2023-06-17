@@ -1,7 +1,6 @@
 {
   "mode": "standard",
   "provider": {
-    "platform": "GitHub.com",
     "type": "github",
     "apiUrl": "https://api.github.com"
   },
