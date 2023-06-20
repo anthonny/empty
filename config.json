@@ -5,5 +5,5 @@
     "apiUrl": "https://api.github.com"
   },
   "repository": "https://github.com/anthonny/empty",
-  "proxyUrl": "https://cors.isomorphic-git.org"
+  "proxyUrl": "https://cors-proxy.hubpress.dev"
 }
