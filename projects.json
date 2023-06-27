@@ -10,5 +10,11 @@
     "repositoryUrl": "https://github.com/anthonny/empty-3.git",
     "repositoryName": "anthonny/empty-3",
     "id": "e9JAUE5PiqmejUDgBL4T59"
+  },
+  {
+    "name": "Gitlab project",
+    "repositoryUrl": "https://gitlab.com/anthonny/empty.git",
+    "repositoryName": "anthonny/empty",
+    "id": "fmezBvgnmhqLpmWTFLzB9b"
   }
 ]
