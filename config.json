@@ -1,0 +1,9 @@
+{
+  "mode": "standard",
+  "provider": {
+    "type": "github",
+    "apiUrl": "https://api.github.com"
+  },
+  "repository": "https://github.com/anthonny/empty",
+  "proxyUrl": "https://cors.isomorphic-git.org"
+}
