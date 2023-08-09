@@ -3,6 +3,6 @@
       "default": "default.njk",
       "post": "post.njk"
     },
-    "version":"0.1.0"
+    "version":"0.1.1"
   }
   
