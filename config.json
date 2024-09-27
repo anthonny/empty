@@ -4,6 +4,6 @@
     "type": "github",
     "apiUrl": "https://api.github.com"
   },
-  "repository": "https://github.com/anthonny/empty",
-  "proxyUrl": "https://cors.isomorphic-git.org"
+  "repository": "https://github.com/anthonny/empty.git",
+  "proxyUrl": "http://localhost:8080"
 }
